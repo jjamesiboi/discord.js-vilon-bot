@@ -1,6 +1,5 @@
 const keepAlive = require('./server');
-const TOKEN = process.env.TOKEN;
-require('dotenv').config();
+
 const { token, default_prefix } = require("./config.json");
 const { badwords } = require("./data.json")
 const { config } = require("dotenv");
@@ -143,4 +142,4 @@ client.on("guildMemberAdd", async member => {
 });
 keepAlive();
 // Login the bot
-client.login(TOKEN);
+client.login(process.env.token)
