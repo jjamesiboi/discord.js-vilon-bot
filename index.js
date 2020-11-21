@@ -1,6 +1,6 @@
 const keepAlive = require('./server');
 
-const { token, default_prefix } = require("./config.json");
+const { default_prefix } = require("./config.json");
 const { badwords } = require("./data.json")
 const { config } = require("dotenv");
 const discord = require("discord.js"); //Gonna use Discord.js Module xD
