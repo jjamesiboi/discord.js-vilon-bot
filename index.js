@@ -1,4 +1,3 @@
-const keepAlive = require('./server');
 
 const { default_prefix } = require("./config.json");
 const { badwords } = require("./data.json")
