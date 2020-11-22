@@ -1,6 +1,5 @@
 
 const { default_prefix } = require("./config.json");
-const { badwords } = require("./data.json")
 const discord = require("discord.js"); //Gonna use Discord.js Module xD
 const client = new discord.Client({
   disableEveryone: true // what does this disable thing do?
@@ -60,21 +59,6 @@ client.on("message", async message => {
 
 
 
-
-    let confirm = false;
-    //NOW WE WILL USE FOR LOOP
-    var i;
-    for (i = 0; i < badwords.length; i++) {
-
-      if (message.content.toLowerCase().includes(badwords[i].toLowerCase()))
-        confirm = true;
-
-    }
-
-    if (confirm) {
-      message.delete()
-      return message.channel.send("You are not allowed to send badwords here")
-    }
 
 
   }
