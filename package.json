@@ -10,6 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "anti-swear-words-packages-discord": "^1.1.0",
     "anime-scraper": "^3.1.1",
     "ascii-table": "^0.0.9",
     "canvas-senpai": "^0.0.2",
