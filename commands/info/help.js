@@ -28,7 +28,7 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription("[Invite me]) | [Support Server](https://discord.gg/BYqfvH7)")
+        .setDescription("[Invite me](https://discord.ly/vilon) | [Support Server](https://discord.gg/BYqfvH7)")
         .setColor("RANDOM")
         .setFooter("(C) DizzyBot Development 2020")
         .setThumbnail(client.user.displayAvatarURL());
