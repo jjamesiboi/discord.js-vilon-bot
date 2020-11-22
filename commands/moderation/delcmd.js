@@ -6,6 +6,9 @@ module.exports = {
   description: "Delete the custom commannd",
   category: "fun",
   run: (client, message, args) => {
+   if(message.author.bot) return;
+    if(message.channel.type === "dm")
+    return message.channel.send("No dm commands...")
 
     let cmdname = args[0]
 

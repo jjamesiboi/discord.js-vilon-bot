@@ -7,7 +7,9 @@ module.exports = {
   description: "Send your Suggestion",
   category: "main",
   run: (client, message, args) => {
-    
+   if(message.author.bot) return;
+    if(message.channel.type === "dm")
+    return message.channel.send("No dm commands...")
   
     let target = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     let reason = args.slice(1).join(' ');

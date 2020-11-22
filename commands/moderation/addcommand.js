@@ -6,7 +6,9 @@ module.exports = {
   description: "add guild custom commands",
   category: "fun",
   run: (client, message, args) => {
-
+   if(message.author.bot) return;
+    if(message.channel.type === "dm")
+    return message.channel.send("No dm commands...")
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: You need `MANAGE_MESSAGES` perms to use this command")
 

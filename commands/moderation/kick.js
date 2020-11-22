@@ -4,6 +4,9 @@ module.exports= {
   category: 'moderation',
   description: 'kick a members',
   run: async(client,message,args,guild) => {
+   if(message.author.bot) return;
+    if(message.channel.type === "dm")
+    return message.channel.send("No dm commands...")
 
     let kicked = message.mentions.users.first() || client.users.resolve(args[0]);
     let reason = args.slice(1).join(" ");

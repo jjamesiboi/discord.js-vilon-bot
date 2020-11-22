@@ -7,7 +7,10 @@ module.exports = {
   usage: "rwarns <@user>",
   description: "Reset warnings of mentioned person",
   run: async (client, message, args) => {
-    
+   if(message.author.bot) return;
+    if(message.channel.type === "dm")
+    return message.channel.send("No dm commands...")
+
     
     if(!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send("You should have admin perms to use this command")
