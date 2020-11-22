@@ -7,7 +7,7 @@ module.exports = {
   usage: "help <cmd>",
   category: "info",
   run: async (client, message, args) => {
-    if(message.channel.type === "dm") return;
+    
     if (args[0]) {
       const command = await client.commands.get(args[0]);
 

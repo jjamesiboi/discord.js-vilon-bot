@@ -6,7 +6,8 @@ module.exports = {
   category: "moderation",
   usage: "mute <@mention> <reason>",
   run: async (client, message, args) => {
-  if(message.channel.type === "dm") return;
+
+
     if (!message.member.hasPermission("MANAGE_ROLES")) {
       return message.channel.send(
         "Sorry but you do not have permission to mute anyone"

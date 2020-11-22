@@ -5,7 +5,7 @@ module.exports = {
   description: "Get the warnings of yours or mentioned person",
   category: "moderation",
   run: (client, message, args) => {
-  if(message.channel.type === "dm") return;
+  
     const user = message.mentions.members.first() || message.author
     
   

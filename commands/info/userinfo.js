@@ -8,7 +8,7 @@ module.exports = {
   usage: "userinfo <MENTION>",
   description: "Get advance stats of given person or yourself",
   run: async (client, message, args) => {
-   if(message.channel.type === "dm") return;
+   
 
 
     let user;

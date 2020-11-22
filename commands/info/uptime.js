@@ -9,7 +9,7 @@ module.exports = {
   description: "Shows Uptime Of Bot",
   category: "info",
   run: (client, message, args) => {
-   if(message.channel.type === "dm") return;
+   
 
 
           const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");

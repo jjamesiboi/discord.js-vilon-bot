@@ -4,7 +4,7 @@ module.exports= {
   category: 'moderation',
   description: 'ban a members',
   run: async(client,message,args,guild) => {
-  if(message.channel.type === "dm") return;
+  
     let banned = message.mentions.users.first() || client.users.resolve(args[0]);
     let reason = args.slice(1).join(" ");
   

@@ -7,7 +7,7 @@ module.exports = {
   description: "Send your Suggestion",
   category: "main",
   run: (client, message, args) => {
-   if(message.channel.type === "dm") return;
+   
   
     if(!args.length) {
       return message.channel.send("Please Give the Suggestion")

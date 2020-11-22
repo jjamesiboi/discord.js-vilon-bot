@@ -9,7 +9,7 @@ module.exports = {
   usage: "corona all or corona <country>",
   aliases: ["covid", "covid19"],
   run: async (client, message, args) => {
-   if(message.channel.type === "dm") return;
+   
     if(!args.length) {
       return message.channel.send("Please give the name of country")
     }
