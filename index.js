@@ -141,4 +141,4 @@ client.on("guildMemberAdd", async member => {
 });
 
 // Login the bot
-client.login(process.env.token);
+client.login(process.env.TOKEN);
