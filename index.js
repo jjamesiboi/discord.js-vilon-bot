@@ -2,7 +2,6 @@ const keepAlive = require('./server');
 
 const { default_prefix } = require("./config.json");
 const { badwords } = require("./data.json")
-const { config } = require("dotenv");
 const discord = require("discord.js"); //Gonna use Discord.js Module xD
 const client = new discord.Client({
   disableEveryone: true // what does this disable thing do?
@@ -142,4 +141,4 @@ client.on("guildMemberAdd", async member => {
 });
 keepAlive();
 // Login the bot
-client.login(process.env.token)
+client.login(process.env.token);
