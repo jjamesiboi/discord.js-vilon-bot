@@ -5,6 +5,7 @@ const discord = require("discord.js"); //Gonna use Discord.js Module xD
 const client = new discord.Client({
   disableEveryone: true // what does this disable thing do?
 });
+const antiSwearWords = require("anti-swear-words-packages-discord")
 const db = require("quick.db"); //WE WILL BE USING QUICK.DB
 const { addexp } = require("./handlers/xp.js");
 client.commands = new discord.Collection();
@@ -139,5 +140,8 @@ client.on("guildMemberAdd", async member => {
   client.channels.cache.get(chx).send("Welcome to our Server " + member.user.username, attachment);
 });
 
+client.on('message', async message => {
+  antiSwearWords(client, message);                                   //module function
+  })
 // Login the bot
 client.login(process.env.TOKEN);
