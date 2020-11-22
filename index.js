@@ -139,6 +139,6 @@ client.on("guildMemberAdd", async member => {
 
   client.channels.cache.get(chx).send("Welcome to our Server " + member.user.username, attachment);
 });
-keepAlive();
+
 // Login the bot
 client.login(process.env.token);
