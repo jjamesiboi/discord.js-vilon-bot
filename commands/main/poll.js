@@ -7,9 +7,7 @@ module.exports = {
   description: "Send your support message",
   category: "main",
   run: (client, message, args) => {
-   if(message.author.bot) return;
-    if(message.channel.type === "dm")
-    return message.channel.send("No dm commands...")
+  if(message.channel.type === "dm") return;
    if(!args.length) {
       return message.channel.send("Please Give the Poll Message")
     }

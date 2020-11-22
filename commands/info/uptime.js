@@ -9,9 +9,7 @@ module.exports = {
   description: "Shows Uptime Of Bot",
   category: "info",
   run: (client, message, args) => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm")
-    return message.channel.send("No dm commands...")
+   if(message.channel.type === "dm") return;
 
 
           const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
