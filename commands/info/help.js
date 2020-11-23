@@ -30,7 +30,7 @@ module.exports = {
       let emx = new MessageEmbed()
         .setDescription("[Invite me](https://discord.ly/vilon) | [Support Server](https://discord.gg/BYqfvH7)")
         .setColor("RANDOM")
-        .setFooter("(C) DizzyBot Development 2020")
+        .setFooter("(C) Swedish Development 2020")
         .setThumbnail(client.user.displayAvatarURL());
 
       let com = {};
