@@ -137,7 +137,7 @@ client.on('message', (message) => {
     });
 
     if (profane) {
-      message.channel.send("<@${message.author.id}> Please don't use swearwords!")
+      message.channel.send(`<@${message.author.id}> dont use swear words!`)
       return message.delete()
         .catch(console.error);
     }
