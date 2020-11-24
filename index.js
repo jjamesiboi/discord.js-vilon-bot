@@ -103,40 +103,6 @@ client.on("message", async message => {
 //GONNA USE EVENT HERE
 
 
-bot.on('guildMemberAdd', async member => {
-
-  let wChan = db.fetch(`welcome_${member.guild.id}`)
-
-  if (wChan == null) return;
-
-  if (!wChan) return;
-
-  let font64 = await jimp.loadFont(jimp.FONT_SANS_64_WHITE)
-  let bfont64 = await jimp.loadFont(jimp.FONT_SANS_64_WHITE)
-  let mask = await jimp.read('https://i.imgur.com/552kzaW.png')
-  let welcome = await jimp.read('https://cdn.discordapp.com/attachments/764408078363525143/780647928364007424/Desktop_Wallpaper_Space-711121.jpg')
-
-  jimp.read(member.user.displayAvatarURL({ format: 'png' })).then(avatar => {
-      avatar.resize(200, 200)
-      mask.resize(200, 200)
-      avatar.mask(mask)
-      welcome.resize(1000, 300)
-
-      welcome.print(font64, 265, 55, `Welcome ${member.user.username}`)
-      welcome.print(bfont64, 265, 125, `To ${member.guild.name}`)
-      welcome.print(font64, 260, 190, `Member #${member.guild.memberCount}`)
-      welcome.composite(avatar, 40, 55).write('Welcome2.png')
-      try {
-          member.guild.channels.cache.get(wChan).send(``, { files: ["Welcome2.png"] })
-      } catch (e) {
-        
-      }
-  })
-      var r = member.guild.roles.cache.find(r => r.name === 'Community');
-      if (!r) return;
-      member.roles.add(r)
-
-});
 
 // Login the bot
 client.login(process.env.TOKEN);
