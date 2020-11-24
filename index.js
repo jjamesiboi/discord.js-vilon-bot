@@ -265,7 +265,6 @@ client.on('message', async message => {
       let levelembed = new MessageEmbed()
           .setColor('00FFEC')
           .setDescription(`**${message.author}, You Have Leveled Up To Level ${levelfetch}**`)
-          .setFooter(`&disablexp To Disable Level Up Messages`)
       message.channel.send(levelembed);
   };
 });
