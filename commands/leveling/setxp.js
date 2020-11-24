@@ -1,15 +1,12 @@
 const db = require('quick.db');
 
 module.exports = {
-    config: {
-        name: 'setxp',
-        aliases: ['enablexp'],
-        category: 'moderation',
-        description: 'Enables Server XP Messages',
-        usage: ' ',
-        accessableby: 'Administrators'
-    },
-    run: async (bot, message, args) => {
+    name: "setxp",
+    usage: "setxp",
+    description: "Enable xp",
+    category: "moderation",
+    run: (client, message, args) => {
+ 
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("**You Do Not Have The Required Permissions! - [ADMINISTRATOR]**")
 
         try {
