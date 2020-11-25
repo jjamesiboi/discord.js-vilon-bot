@@ -4,6 +4,7 @@ const discord = require("discord.js"); //Gonna use Discord.js Module xD
 const client = new discord.Client({
   disableEveryone: true // what does this disable thing do?
 });
+const Levels = require("discord-xp")
 
 const db = require("quick.db"); //WE WILL BE USING QUICK.DB
 const { addexp } = require("./handlers/xp.js");
