@@ -16,7 +16,7 @@ module.exports = {
 
       const levelEmbed = new Discord.MessageEmbed()
       .setTitle('What is your level and xp?')
-          .setAvatar(message.athor.DislayAvatarURL({ dynamic: false, format: 'png' }))
+      .setAuthor('Vilon', 'https://cdn.discordapp.com/avatars/740121377067106385/2ff3900cb267ca5bda5976d700d9a952.png?size=256', 'https://jamesmesser.xyz')
           .setDescription('Your levels!')
           .addField(`**${message.author.username}'s Level is:**`, `${user.level}`, true)
           .addField(`**${message.author.username}'s XP!**`, `${user.xp}`, true)
