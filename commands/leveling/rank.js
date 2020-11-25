@@ -5,7 +5,8 @@ module.exports = {
     category: "leveling",
     description: "Get your level and xp",
     usage: "rank",
-    run: (client, message) => {
+    run: async (client, message, args) => {
+
      
       const target = message.mentions.users.first() || message.author; // Grab the target.
  
