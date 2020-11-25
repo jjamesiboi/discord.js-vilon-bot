@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const canvacord = require("canvacord")
+const Levels = require('discord-xp');
 module.exports = {
     name: "rank",
     category: "leveling",
