@@ -114,5 +114,15 @@ client.on("message", async (message) => {
   }
 });
 
+client.on('message', message => {
+	if (message.content === '&level') {
+    const target = message.mentions.users.first() || message.author; // Grab the target.
+ 
+const user = await Levels.fetch(target.id, message.guild.id); // Selects the target from the database.
+ 
+if (!user) return message.channel.send("You dont have any XP..."); // If there isnt such user in the database, we send a message in general.
+message.channel.send(`** ${target.tag} is currently level ${user.level} and has ${user.xp} XP**`); // We show the level.
+}
+});
 // Login the bot
 client.login(process.env.TOKEN);
