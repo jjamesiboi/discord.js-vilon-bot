@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const Levels = require('discord-xp');
 const canvacord = require("canvacord")
 module.exports = {
     name: "rank",
@@ -14,19 +13,17 @@ module.exports = {
        
       if (!user) return message.channel.send("You dont have xp, send some messages to earn some!"); // If there isnt such user in the database, we send a message in general.
 
-      const rank = new canvacord.Rank()
+      const levelEmbed = new Discord.MessageEmbed()
+      .setTitle('What is your level and xp?')
           .setAvatar(message.athor.DislayAvatarURL({ dynamic: false, format: 'png' }))
-          .setCurrentXP(user.xp)
-          .setRequiredXP(neededXp)
-          .setStatus(message.member.presence.status)
-          .setProgressBar("#FFA500", "COLOR")
-          .setUsername(message.author.username)
-          .setDiscriminator("0001");
-       
-      rank.build()
-          .then(data => {
-              const attachment = new Discord.MessageAttachment(data, "RankCard.png");
-              message.channel.send(attachment);
-            });
+          .setDescription('Your levels!')
+          .addField(`**${message.author.username}'s Level is:**`, `${user.level}`, true)
+          .addField(`**${message.author.username}'s XP!**`, `${user.xp}`, true)
+          .setFooter('Send more messages and you will level up and gain xp!')
+
+     message.channel.send(levelEmbed);
+
+
+            }
           }
-        }
+        
