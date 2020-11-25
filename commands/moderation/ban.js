@@ -16,13 +16,13 @@ module.exports= {
         .setDescription(
           `**Description:** Ban a member, optional time limit. \n` +
             "**Sub Commands:**\n" +
-            "-ban save | Ban a user and save their messages in chat. \n" +
+            "&ban save | Ban a user and save their messages in chat. \n" +
             "**Usage:**\n" +
-            "-ban [user] (limit) (reason) \n" +
-            "-ban save [user] (limit) (reason) \n" +
+            "&ban [user] (limit) (reason) \n" +
+            "&ban save [user] (limit) (reason) \n" +
             "**Examples:** \n" +
-            "-ban <@597253939469221891> 48h spam \n" +
-            "-ban save <@597253939469221891> 48h spam "
+            "&ban <@597253939469221891> 48h spam \n" +
+            "&ban save <@597253939469221891> 48h spam "
         )
         .setColor("#2C2F33");
       message.channel.send(baninfoembed);

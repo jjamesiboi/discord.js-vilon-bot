@@ -19,9 +19,9 @@ module.exports= {
             "**Sub Commands:**\n" +
             "\n" +
             "**Usage:**\n" +
-            "-kick [user] (reason) \n" +
+            "&kick [user] (reason) \n" +
             "**Examples:** \n" +
-            "-kick <@597253939469221891> spam"
+            "&kick <@597253939469221891> spam"
         )
         .setColor("#2C2F33");
       message.channel.send(kickinfoembed);
