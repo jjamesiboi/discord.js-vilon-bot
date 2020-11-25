@@ -10,7 +10,7 @@ module.exports = {
      
       const target = message.mentions.users.first() || message.author; // Grab the target.
  
-      const user = await Levels.fetch(target.id, message.guild.id); // Selects the target from the database.
+      const user = Levels.fetch(target.id, message.guild.id); // Selects the target from the database.
        
       if (!user) return message.channel.send("You dont have xp, send some messages to earn some!"); // If there isnt such user in the database, we send a message in general.
 
